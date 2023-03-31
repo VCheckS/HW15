@@ -13,6 +13,26 @@ public class TicketRepository {
         tmp[tmp.length - 1] = ticket;
         tickets = tmp;
     }
+    public void removeById(int removeId) {
+        Ticket[] tmp = new Ticket[tickets.length - 1];
+        int index = 0;
+        for (Ticket ticket : tickets) {
+            if (ticket.getId() != removeId) {
+                tmp[index] = ticket;
+                index++;
+            }
+        }
+        tickets = tmp;
+    }
+
+    private Ticket findById(int id) {
+        for (Ticket ticket : tickets) {
+            if (ticket.getId() == id) {
+                return ticket;
+            }
+        }
+        return null;
+    }
 
 
 }
