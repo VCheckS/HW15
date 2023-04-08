@@ -36,6 +36,7 @@ public class ManagerTest {
         Assertions.assertArrayEquals(expected, actual);
 
     }
+
     @Test
     public void testSortTicketsNoFound() {
         TicketRepository repo = new TicketRepository();
@@ -68,6 +69,7 @@ public class ManagerTest {
         Assertions.assertArrayEquals(expected, actual);
 
     }
+
     @Test
     public void testSortTicketsOneFound() {
         TicketRepository repo = new TicketRepository();
@@ -100,6 +102,7 @@ public class ManagerTest {
         Assertions.assertArrayEquals(expected, actual);
 
     }
+
     @Test
     public void testSortTicketsWhenAlreadySort() {
         TicketRepository repo = new TicketRepository();
@@ -132,6 +135,7 @@ public class ManagerTest {
         Assertions.assertArrayEquals(expected, actual);
 
     }
+
     @Test
     public void testSortTicketsWhenSamePrice() {
         TicketRepository repo = new TicketRepository();
@@ -164,6 +168,7 @@ public class ManagerTest {
         Assertions.assertArrayEquals(expected, actual);
 
     }
+
     @Test
     public void removeByIdWhenIdIsCorrect() {
 
@@ -194,7 +199,7 @@ public class ManagerTest {
 
         repo.removeById(5);
         Ticket[] actual = repo.findAll();
-        Ticket[] expected = {ticket1, ticket2,ticket3, ticket4, ticket6, ticket7, ticket8, ticket9, ticket10};
+        Ticket[] expected = {ticket1, ticket2, ticket3, ticket4, ticket6, ticket7, ticket8, ticket9, ticket10};
 
         Assertions.assertArrayEquals(expected, actual);
 
